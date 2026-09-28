@@ -1,4 +1,6 @@
+{% if php_opcache_zend_extension != '' %}
 zend_extension={{ php_opcache_zend_extension }}
+{% endif %}
 {% for key, var in template_opcache_vars.items() %}
 opcache.{{ key }}={{ var }}
 {% endfor %}
